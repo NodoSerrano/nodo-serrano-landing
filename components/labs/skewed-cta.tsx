@@ -7,18 +7,22 @@ import { ArrowRight } from "lucide-react"
 export function SkewedCta({
   href,
   label,
+  warm = false,
 }: {
   href: string
   label: string
+  warm?: boolean
 }) {
+  const gradient = warm ? "bg-gradient-warm" : "bg-gradient-brand"
+  const shadow = { boxShadow: warm ? "var(--shadow-btn-warm)" : "var(--shadow-btn-cool)" }
   const className =
     "group inline-flex -skew-x-[10deg] items-stretch transition-opacity hover:opacity-90"
 
   const inner = (
     <>
       <span
-        className="flex items-center rounded-tl-[8px] bg-gradient-brand p-[1.5px]"
-        style={{ boxShadow: "var(--shadow-btn-cool)" }}
+        className={`flex items-center rounded-tl-[8px] ${gradient} p-[1.5px]`}
+        style={shadow}
       >
         <span className="flex items-center rounded-tl-[7px] bg-(--color-bg-elev-dark) px-5 py-2.5">
           <span className="skew-x-[10deg] font-display text-body font-medium text-(--color-text-primary-dark)">
@@ -27,8 +31,8 @@ export function SkewedCta({
         </span>
       </span>
       <span
-        className="flex items-center justify-center rounded-br-[8px] bg-gradient-brand px-3"
-        style={{ boxShadow: "var(--shadow-btn-cool)" }}
+        className={`flex items-center justify-center rounded-br-[8px] ${gradient} px-3`}
+        style={shadow}
       >
         <ArrowRight
           className="size-5 skew-x-[10deg] text-(--color-text-primary-dark)"
