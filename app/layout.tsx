@@ -11,9 +11,9 @@ export const metadata = {
   title: "Nodo Serrano",
   description: "Comunidad de Ethereum - Investigación y educación en Tandil",
   icons: {
-    // favicon.svg is now self-contained (vector cube only). It previously
-    // <use>d nodo-logo.svg, which embedded a ~110 KB base64 PNG and was fetched
-    // at high priority on every page load.
+    // favicon.svg is self-contained: full logo as vectors plus a 128px PNG of the
+    // top gradient (~15 KB total). It previously <use>d nodo-logo.svg, which
+    // embedded a ~110 KB base64 PNG and was fetched on every page load.
     icon: { url: '/favicon.svg', type: 'image/svg+xml' },
     apple: '/favicon.svg',
   },
