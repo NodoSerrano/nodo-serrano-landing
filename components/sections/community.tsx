@@ -263,7 +263,7 @@ function LabsCard() {
 
 export default function Community() {
   return (
-    <section className="relative isolate z-20 flex min-h-[80svh] flex-col bg-(--color-bg-light) pb-[100px] lg:bg-transparent">
+    <section className="relative isolate z-20 flex min-h-[80svh] overflow-x-clip flex-col bg-(--color-bg-light) pb-[100px] lg:bg-transparent">
       <BlobBackground />
 
       <Container className="flex flex-1 flex-col">

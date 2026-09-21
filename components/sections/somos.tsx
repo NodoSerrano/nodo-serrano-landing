@@ -71,7 +71,7 @@ export default function Somos() {
   return (
     <section
       id="about"
-      className="font-inter relative isolate z-20 overflow-clip bg-(--color-bg-light) pb-28 pt-6 md:pb-40 md:pt-10 lg:overflow-visible lg:bg-transparent lg:pb-28 lg:pt-6"
+      className="font-inter relative isolate z-20 overflow-clip bg-(--color-bg-light) pb-28 pt-6 md:pb-40 md:pt-10 lg:overflow-y-visible lg:bg-transparent lg:pb-28 lg:pt-6"
     >
       <Container>
         {/* Desktop (lg+): composición freeform del Figma */}
