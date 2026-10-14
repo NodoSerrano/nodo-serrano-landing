@@ -7,6 +7,7 @@ import ConstruirTitle from "@/components/sections/construir-title";
 import Blog from "@/components/sections/blog";
 import Sponsors from "@/components/sections/sponsors";
 import Newsletter from "@/components/sections/newsletter";
+import ScrollArrow from "@/components/decor/scroll-arrow";
 import { ScrollHashManager } from "@/components/scroll-hash-manager";
 import { getGhostPosts } from "@/lib/ghost";
 import { getLumaStatus } from "@/lib/luma";
@@ -24,6 +25,7 @@ export default async function Home() {
 
   return (
     <div id="top" className="min-h-screen flex flex-col">
+      <ScrollArrow />
       <ScrollHashManager />
       <main className="flex flex-col">
         {/* Hero Section (incluye el Header nuevo) */}

@@ -214,7 +214,19 @@
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  /* Float de la flecha decorativa (components/decor/scroll-arrow.tsx). Solo
+     transform → corre en el compositor, sin layout ni paint por frame. */
+  --animate-arrow-float: arrow-float 11s ease-in-out infinite;
 
+  @keyframes arrow-float {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -18px, 0);
+    }
+  }
   @keyframes accordion-down {
     from {
       height: 0;
