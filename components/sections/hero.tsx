@@ -5,7 +5,7 @@ import { Reveal } from "@/components/motion/fade-in"
 export default function Hero() {
   return (
     <section
-      className="font-inter relative w-full h-[80svh] md:h-[85svh] flex flex-col overflow-hidden"
+      className="font-inter relative w-full min-h-[80svh] md:min-h-[85svh] flex flex-col overflow-hidden"
     >
       {/* Preload the mobile hero crop only — it's the LCP element on phones and
           this is the throttled-mobile metric Lighthouse scores. Desktop gets
@@ -59,8 +59,12 @@ export default function Hero() {
       {/* Header — sits inside Hero, fixed position, shares the hero background */}
       <Header />
 
-      {/* Content — staggered entrance, framer-motion-free (see Reveal). */}
-      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-left px-4 md:px-12 pt-20 pb-48 md:pt-8 md:pb-40">
+      {/* Content — staggered entrance, framer-motion-free (see Reveal).
+          pb reserves the Labs card overlap (community.tsx -mt-[190px]/md:-mt-[235px]);
+          md:pt clears the fixed header and mirrors the pb bump so tall screens
+          keep the same vertical center. min-h (not h) lets short viewports grow
+          the hero instead of sliding "Tandil" under the card. */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-left px-4 md:px-12 pt-20 pb-48 md:pt-[107px] md:pb-[235px]">
         <div className="max-w-3xl md:max-w-[654px] space-y-8 md:space-y-9">
           {/* Headings */}
           <div className="space-y-3 md:space-y-9">
